@@ -28,17 +28,26 @@
  */
 
 
-const message = prompt("Яка офіційна назва JavaScript?").trim();
+// const message = prompt("Яка офіційна назва JavaScript?").trim();
 
-if(message === "ECMAScript") {
-  alert ("Вірно!");
-} else {
-  alert ("Не знаєте? ECMAScript!")
-}
+// if(message === "ECMAScript") {
+//   alert ("Вірно!");
+// } else {
+//   alert ("Не знаєте? ECMAScript!")
+// }
 
+/**
 
+Напишіть програму, яка отримає від користувача
+ число (кількість хвилин) та виведе в консоль
+ рядок у форматі годин та хвилин
+ 70 === 01:10
+ */
 
-
+const number = prompt("ведіть число");
+const hours = String(Math.floor(number/60)).padStart(2, "0");
+const minutes = String(number%60).padStart(2, "0");
+console.log(`${hours}:${minutes}`);
 
 
 
