@@ -57,19 +57,55 @@
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
-const user = {
-  name: "John",
-  age: 20,
-  hobby: "tennis",
-  premium: true,
-};
+// const user = {
+//   name: "John",
+//   age: 20,
+//   hobby: "tennis",
+//   premium: true,
+// };
 
-user.mood = "happy";
-user.hobby = "skydiving";
-user.premium = false;
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
 
 
 
-for (const key of Object.keys(user)) {
-  console.log(`${key}: ${user[key]}`)
-}
+// for (const key of Object.keys(user)) {
+//   console.log(`${key}: ${user[key]}`)
+// }
+
+
+
+/**
+ * 
+ 
+ *? Напишіть ф-цію calcTotalPrice(someStones, stoneName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція шукає та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+//  const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+
+
+// function calcTotalPrice(someStones, stoneName) {
+ 
+//   for (const {name, price, quantity} of someStones) {
+    
+//     if(stoneName === name) {
+    
+//       return price * quantity 
+//     }
+//   }
+
+// return "Ничего не найдено"
+// }
+
+// console.log(calcTotalPrice(stones, "Сапфир"));
+
