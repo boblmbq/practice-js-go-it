@@ -64,18 +64,13 @@
 //   premium: true,
 // };
 
-
 // user.mood = "happy";
 // user.hobby = "skydiving";
 // user.premium = false;
 
-
-
 // for (const key of Object.keys(user)) {
 //   console.log(`${key}: ${user[key]}`)
 // }
-
-
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
 // const someObj = {
@@ -84,13 +79,12 @@
 //   worker3: 240,
 // };
 
-
 // function calcSalary(data) {
 //  const values = Object.values(data);
 //  let sum = 0;
 //  for (const value of values) {
 //   sum += value;
-  
+
 //  } return sum;
 // }
 
@@ -113,14 +107,13 @@
 //   { name: "Щебень", price: 150, quantity: 100 },
 // ];
 
-
 // function calcTotalPrice(someStones, stoneName) {
- 
+
 //   for (const {name, price, quantity} of someStones) {
-    
+
 //     if(stoneName === name) {
-    
-//       return price * quantity 
+
+//       return price * quantity
 //     }
 //   }
 
@@ -129,6 +122,25 @@
 
 // console.log(calcTotalPrice(stones, "Сапфир"));
 
+///**
+// *? Зробіть знижку 20% на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
 
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
 
+function frutsOff(array, discount) {
+  let id = 1;
+  for (let fruit of array) {
+    fruit.price -= (fruit.price * discount) / 100;
+    fruit.id = id;
+    id += 1;
+  }
+}
 
+frutsOff(fruits, 20);
+console.log(fruits);
