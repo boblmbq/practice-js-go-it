@@ -64,6 +64,7 @@
 //   premium: true,
 // };
 
+
 // user.mood = "happy";
 // user.hobby = "skydiving";
 // user.premium = false;
@@ -75,6 +76,25 @@
 // }
 
 
+
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
+
+
+// function calcSalary(data) {
+//  const values = Object.values(data);
+//  let sum = 0;
+//  for (const value of values) {
+//   sum += value;
+  
+//  } return sum;
+// }
+
+// console.log(calcSalary(someObj));
 
 /**
  * 
@@ -108,4 +128,7 @@
 // }
 
 // console.log(calcTotalPrice(stones, "Сапфир"));
+
+
+
 
