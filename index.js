@@ -127,20 +127,35 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
-function frutsOff(array, discount) {
-  let id = 1;
-  for (let fruit of array) {
-    fruit.price -= (fruit.price * discount) / 100;
-    fruit.id = id;
-    id += 1;
-  }
-}
+// function frutsOff(array, discount) {
+//   let id = 1;
+//   for (let fruit of array) {
+//     fruit.price -= (fruit.price * discount) / 100;
+//     fruit.id = id;
+//     id += 1;
+//   }
+// }
 
-frutsOff(fruits, 20);
-console.log(fruits);
+// frutsOff(fruits, 20);
+// console.log(fruits);
+
+
+// напиши код який із массиву arr видаляє елемент foo.
+// розвертає цей массив
+// і повертає рядок js is the best
+// вхідний массив не має змінюватись (мутується)
+
+const arr = ["best", "the", "foo", "is", "js"];
+
+const arr2 = [...arr];
+
+arr2.splice(arr2.indexOf("foo"), 1)
+
+console.log(arr2.reverse().join(" "));
+
