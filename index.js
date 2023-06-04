@@ -17,7 +17,6 @@
 //   }
 // }
 
-
 /**
  *? Використовуючи функцію if...else,
  *? напишіть код, який запитуватиме:
@@ -26,7 +25,6 @@
  *? то показати через alert: "Вірно!"
  *? інакше відобразити:"Не знаєте? ECMAScript!"
  */
-
 
 // const message = prompt("Яка офіційна назва JavaScript?").trim();
 
@@ -44,16 +42,34 @@
  70 === 01:10
  */
 
-const number = prompt("ведіть число");
-const hours = String(Math.floor(number/60)).padStart(2, "0");
-const minutes = String(number%60).padStart(2, "0");
-console.log(`${hours}:${minutes}`);
+// const number = prompt("ведіть число");
+// const hours = String(Math.floor(number/60)).padStart(2, "0");
+// const minutes = String(number%60).padStart(2, "0");
+// console.log(`${hours}:${minutes}`);
+
+/**
+ *? Напиши скрипт для об'єкта user,
+ *? послідовно:
+ *? 1 додати поле mood зі значенням 'happy'
+ *? 2 замінить hobby на 'skydiving'
+ *? 3 замінить значення premium на false
+ *? 4 виводить вміст об'єкта users у форматі
+ *? ключ: значення використовуючи Object.keys() і for...of
+ */
+
+const user = {
+  name: "John",
+  age: 20,
+  hobby: "tennis",
+  premium: true,
+};
+
+user.mood = "happy";
+user.hobby = "skydiving";
+user.premium = false;
 
 
 
-
-
-
-
-
-
+for (const key of Object.keys(user)) {
+  console.log(`${key}: ${user[key]}`)
+}
