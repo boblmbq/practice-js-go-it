@@ -145,13 +145,25 @@
 // frutsOff(fruits, 20);
 // console.log(fruits);
 
-
 // напиши код який із массиву arr видаляє елемент foo.
 // розвертає цей массив
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
 // const arr = ["best", "the", "foo", "is", "js"];
+
+// const arr2 = [...arr];
+
+// arr2.splice(arr2.indexOf("foo"), 1)
+
+// console.log(arr2.reverse().join(" "));
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+=======
 
 // const arr2 = [...arr];
 
@@ -277,41 +289,55 @@
 //       LOW: "low",
 //     };
 
-class Notes {
-    #findNoteIndex(text) {
-        return this.items.findIndex((item) => item.text === text);
-    }
-    static Priority() {
-        return {
-            HIGHT: "hight",
-            LOW: "low",
-        };
-    }
-    constructor() {
-        this.items = [];
-    }
-    addNote(note) {
-        this.items.push(note);
-    }
-    removeNote(text) {
-        const index = this.#findNoteIndex(text);
-        if (index !== -1) {
-            this.items.splice(index, 1);
-        }
-    }
-    updatePriority(text, newPriority) {
-        const index = this.#findNoteIndex(text);
-        if (index !== -1) {
-            this.items[index].priority = newPriority;
-        }
-    }
-}
-const NewNotes = new Notes();
-NewNotes.addNote({ text: "abc", priority: Notes.Priority().HIGHT });
-NewNotes.addNote({ text: "cde", priority: Notes.Priority().HIGHT });
-NewNotes.addNote({ text: "efg", priority: Notes.Priority().HIGHT });
-NewNotes.addNote({ text: "ghi", priority: Notes.Priority().HIGHT });
-NewNotes.removeNote("yyy");
-console.log(NewNotes);
-NewNotes.updatePriority("cde", "mmm");
+// class Notes {
+//     #findNoteIndex(text) {
+//         return this.items.findIndex((item) => item.text === text);
+//     }
+//     static Priority() {
+//         return {
+//             HIGHT: "hight",
+//             LOW: "low",
+//         };
+//     }
+//     constructor() {
+//         this.items = [];
+//     }
+//     addNote(note) {
+//         this.items.push(note);
+//     }
+//     removeNote(text) {
+//         const index = this.#findNoteIndex(text);
+//         if (index !== -1) {
+//             this.items.splice(index, 1);
+//         }
+//     }
+//     updatePriority(text, newPriority) {
+//         const index = this.#findNoteIndex(text);
+//         if (index !== -1) {
+//             this.items[index].priority = newPriority;
+//         }
+//     }
+// }
+// const NewNotes = new Notes();
+// NewNotes.addNote({ text: "abc", priority: Notes.Priority().HIGHT });
+// NewNotes.addNote({ text: "cde", priority: Notes.Priority().HIGHT });
+// NewNotes.addNote({ text: "efg", priority: Notes.Priority().HIGHT });
+// NewNotes.addNote({ text: "ghi", priority: Notes.Priority().HIGHT });
+// NewNotes.removeNote("yyy");
+// console.log(NewNotes);
+// NewNotes.updatePriority("cde", "mmm");
 
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
+
+// const fruitsArr = fruits.map((el, idx) => {
+//   return {
+//     ...el,
+//     price: el.price * 0.8,
+//     id: idx + 1,
+//   };
+// });
+// console.log(fruitsArr);
