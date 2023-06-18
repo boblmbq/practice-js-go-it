@@ -151,11 +151,41 @@
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
-const arr = ["best", "the", "foo", "is", "js"];
+// const arr = ["best", "the", "foo", "is", "js"];
 
-const arr2 = [...arr];
+// const arr2 = [...arr];
 
-arr2.splice(arr2.indexOf("foo"), 1)
+// arr2.splice(arr2.indexOf("foo"), 1)
 
-console.log(arr2.reverse().join(" "));
+// console.log(arr2.reverse().join(" "));
 
+
+
+
+
+// blended 3 task 1
+/**
+ *? З об'єкту concerts потрібно отримати масив
+ *? в якому будуть лише імена міст.
+ *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+ *? відсортувати їх у хронологічному порядку.
+ *? Результат вивести у консоль.
+ *? Очікуваний результат ["Умань", "Харків", "Одеса"]
+ */
+//  const concerts = {
+//     Київ: new Date("2020-04-01"),
+//     Умань: new Date("2023-07-02"),
+//     Вінниця: new Date("2024-04-21"),
+//     Одеса: new Date("2020-07-15"),
+//     Хмельницький: new Date("2020-04-18"),
+//     Харків: new Date("2023-07-10"),
+//   };
+
+//   function filtrConcerts (obj) {
+// return Object.keys(obj).filter(city => obj[city] > new Date()).sort((a,b) => obj[a] - obj[b])
+
+//   }
+
+//   const rezult = filtrConcerts (concerts);
+
+// console.log(rezult);
