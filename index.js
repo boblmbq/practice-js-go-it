@@ -145,17 +145,36 @@
 // frutsOff(fruits, 20);
 // console.log(fruits);
 
-
 // напиши код який із массиву arr видаляє елемент foo.
 // розвертає цей массив
 // і повертає рядок js is the best
 // вхідний массив не має змінюватись (мутується)
 
-const arr = ["best", "the", "foo", "is", "js"];
+// const arr = ["best", "the", "foo", "is", "js"];
 
-const arr2 = [...arr];
+// const arr2 = [...arr];
 
-arr2.splice(arr2.indexOf("foo"), 1)
+// arr2.splice(arr2.indexOf("foo"), 1)
 
-console.log(arr2.reverse().join(" "));
+// console.log(arr2.reverse().join(" "));
 
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+const fruitsArr = fruits.map((el, idx) => {
+  return {
+    ...el,
+    price: el.price * 0.8,
+    id: idx + 1,
+  };
+});
+console.log(fruitsArr);
