@@ -200,61 +200,118 @@
 */
 
 
-class Client {
-    #login;
-    #email;
-    constructor(login, email){
-        this.#login =login;
-        this.#email = email
-    }
+// class Client {
+//     #login;
+//     #email;
+//     constructor(login, email){
+//         this.#login =login;
+//         this.#email = email
+//     }
 
-    get login (){
-        return this.#login
-    }
+//     get login (){
+//         return this.#login
+//     }
 
-    set login (newLogin) {
-        this.#login = newLogin;
-    }
+//     set login (newLogin) {
+//         this.#login = newLogin;
+//     }
 
-    get email (){
-        return this.#email
-    }
+//     get email (){
+//         return this.#email
+//     }
 
-    set email (newEmail) {
-        this.#email = newEmail;
-    }
-}
+//     set email (newEmail) {
+//         this.#email = newEmail;
+//     }
+// }
 
-const mango = new Client ("man","man@man.com");
-console.log(mango);
+// const mango = new Client ("man","man@man.com");
+// console.log(mango);
 
-mango.login = 'vbnm';
-mango.login
-console.log(mango.login);
+// mango.login = 'vbnm';
+// mango.login
+// console.log(mango.login);
 
-// Task module5-2
+// // Task module5-2
 
-//TODO:==============================================
+// //TODO:==============================================
+// /**
+// *? Поверніть об'єкт, в якому вказано кількість тегів.
+// *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+//  */
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
+
+// function amountTags(arr) {
+//     return arr.flatMap((arrItem) => arrItem.tags)
+//         .reduce((acc, item) => {
+//             return {
+//                 ...acc,
+//                 [item]: acc[item] ? acc[item] + 1 : 1
+//             }
+//     }, {})
+// }
+// console.log(amountTags(tweets));
+
+
+// task5-5
+//TODO:=============================================
 /**
-*? Поверніть об'єкт, в якому вказано кількість тегів.
-*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
-
+ *? Напиши клас Notes який управляє колекцією нотаток у
+ *? властивості items.
+ *? Нотатка - це об'єкт із властивостями text і priority.
+ *? Додай класу статичний метод Priopity,
+ *? який буде повертати об'єкт із пріоритетами.
+ *? Додай методи addNote(note), removeNote(text)
+ *? updatePriority(text, newPriority)
  */
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// static Priority() {
+//     return {
+//       HIGHT: "hight",
+//       LOW: "low",
+//     };
 
-function amountTags(arr) {
-    return arr.flatMap((arrItem) => arrItem.tags)
-        .reduce((acc, item) => {
-            return {
-                ...acc,
-                [item]: acc[item] ? acc[item] + 1 : 1
-            }
-    }, {})
+class Notes {
+    #findNoteIndex(text) {
+        return this.items.findIndex((item) => item.text === text);
+    }
+    static Priority() {
+        return {
+            HIGHT: "hight",
+            LOW: "low",
+        };
+    }
+    constructor() {
+        this.items = [];
+    }
+    addNote(note) {
+        this.items.push(note);
+    }
+    removeNote(text) {
+        const index = this.#findNoteIndex(text);
+        if (index !== -1) {
+            this.items.splice(index, 1);
+        }
+    }
+    updatePriority(text, newPriority) {
+        const index = this.#findNoteIndex(text);
+        if (index !== -1) {
+            this.items[index].priority = newPriority;
+        }
+    }
 }
-console.log(amountTags(tweets));
+const NewNotes = new Notes();
+NewNotes.addNote({ text: "abc", priority: Notes.Priority().HIGHT });
+NewNotes.addNote({ text: "cde", priority: Notes.Priority().HIGHT });
+NewNotes.addNote({ text: "efg", priority: Notes.Priority().HIGHT });
+NewNotes.addNote({ text: "ghi", priority: Notes.Priority().HIGHT });
+NewNotes.removeNote("yyy");
+console.log(NewNotes);
+NewNotes.updatePriority("cde", "mmm");
+
