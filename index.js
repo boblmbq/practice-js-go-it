@@ -190,6 +190,48 @@
 //   const rezult = filtrConcerts (concerts);
 
 // console.log(rezult);
+
+
+/*
+*? Напиши клас Client який створює об'єкт
+*? з ​​властивостями login email
+*? Оголоси приватні властивості #login #email,
+*? доступ до яких зроби через геттер та сеттер login email
+*/
+
+
+class Client {
+    #login;
+    #email;
+    constructor(login, email){
+        this.#login =login;
+        this.#email = email
+    }
+
+    get login (){
+        return this.#login
+    }
+
+    set login (newLogin) {
+        this.#login = newLogin;
+    }
+
+    get email (){
+        return this.#email
+    }
+
+    set email (newEmail) {
+        this.#email = newEmail;
+    }
+}
+
+const mango = new Client ("man","man@man.com");
+console.log(mango);
+
+mango.login = 'vbnm';
+mango.login
+console.log(mango.login);
+
 // Task module5-2
 
 //TODO:==============================================
